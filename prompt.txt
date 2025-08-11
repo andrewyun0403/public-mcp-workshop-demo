@@ -1,0 +1,40 @@
+Please create a data steward Node.js typescript project refer to @https://github.com/invariantlabs-ai/mcp-streamable-http/tree/main/typescript-example/server 
+
+Our target database type is postgres SQL
+
+This project will create server.ts:
+- please clone the @https://github.com/invariantlabs-ai/mcp-streamable-http/blob/main/typescript-example/server/src/server.ts as base to edit.
+- using Please refer to the requirement @/requirements.md  to create the features
+
+index.ts: please clone the @https://github.com/invariantlabs-ai/mcp-streamable-http/blob/main/typescript-example/server/src/index.ts as base to edit 
+
+package.json please refer to @https://github.com/invariantlabs-ai/mcp-streamable-http/blob/main/typescript-example/server/package.json
+
+tsconfig.json please refer to @https://github.com/invariantlabs-ai/mcp-streamable-http/blob/main/typescript-example/server/tsconfig.json
+
+The tool's purpose is to read a `.env` file to get database connection details.
+
+The DDL query should be `SELECT column_name, data_type, character_maximum_length FROM information_schema.columns WHERE table_catalog = $schema_name AND table_name = $table_name ORDER BY ordinal_position ASC;`
+
+Ensure robust error handling for missing profiles and unsupported database types.
+
+Please also show me the installation and execuation guide (npm i --save-dev @types/pg)
+
+############### Remember open the next cline chat (enable the MCP server)
+can you get the following postgresSQL DDL, save in a ddl file?
+
+PGHOST=10.158.1.222
+PGPORT=25432
+PGUSER=mcp
+PGPASSWORD=Abcd1234
+PGDATABASE=employees
+
+There are 6 tables in the database:
+department
+department_employee
+department_manager
+employee
+salary
+title
+
+please based on ddl to generate the data dictionary in md table format with column name, column type and description?
